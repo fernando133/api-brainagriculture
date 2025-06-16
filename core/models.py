@@ -2,6 +2,9 @@
 from django.db import models
 from validate_docbr import CPF, CNPJ
 
+from django.db import models
+from validate_docbr import CPF, CNPJ
+
 class Produtor(models.Model):
     nome = models.CharField(max_length=100)
     email = models.EmailField()
@@ -31,6 +34,18 @@ class Produtor(models.Model):
         cnpj = Produtor.limpar_cnpj(cnpj_raw)
         return CNPJ().validate(cnpj)
 
+    @staticmethod
+    def msg_cpf_ou_cnpj_obrigatorio() -> str:
+        return "Informe um CPF ou um CNPJ."
+
+    @staticmethod
+    def msg_cpf_invalido() -> str:
+        return "CPF inválido."
+
+    @staticmethod
+    def msg_cnpj_invalido() -> str:
+        return "CNPJ inválido."
+
 
 class Propriedade(models.Model):
     id = models.AutoField(primary_key=True)
@@ -44,11 +59,16 @@ class Propriedade(models.Model):
 
     def __str__(self):
         return f"{self.nome} ({self.produtor.nome})"
-    
+
     @staticmethod
     def validar_areas(area_total, area_agriculturavel, area_vegetacao):
         if (area_agriculturavel + area_vegetacao) > area_total:
-            return False, "A soma das áreas agricultável e de vegetação não pode exceder a área total da propriedade."
-        return True, ""
+            return False
+        return True
+    
+    @staticmethod
+    def msg_erro_areas_invalidas() -> str:
+        return "A soma das áreas agricultável e de vegetação não pode exceder a área total da propriedade."
+
 
 
