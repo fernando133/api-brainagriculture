@@ -5,3 +5,7 @@ psycopg2-binary
 dj-database-url
 drf-spectacular
 validate_docbr
+django-extensions
+graphviz
+pydotplus
+drf-yasg
