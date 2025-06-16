@@ -1,9 +1,8 @@
 # core/serializers.py
 from rest_framework import serializers
-from .models import Produtor, Propriedade
+from .models import Produtor, Propriedade, Safra, Cultura
 
 from rest_framework import serializers
-from .models import Produtor
 
 class ProdutorSerializer(serializers.ModelSerializer):
     class Meta:
@@ -44,3 +43,15 @@ class PropriedadeSerializer(serializers.ModelSerializer):
         if not valido:
             raise serializers.ValidationError({"areas_invalidas":Propriedade.msg_erro_areas_invalidas()})
         return data
+    
+
+class SafraSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Safra
+        fields = '__all__'
+
+
+class CulturaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cultura
+        fields = '__all__'

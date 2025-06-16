@@ -71,4 +71,13 @@ class Propriedade(models.Model):
         return "A soma das áreas agricultável e de vegetação não pode exceder a área total da propriedade."
 
 
+class Safra(models.Model):
+    id = models.AutoField(primary_key=True)
+    propriedade = models.ForeignKey(Propriedade, related_name='safras', on_delete=models.CASCADE)
+    ano = models.CharField(max_length=4)
+
+class Cultura(models.Model):
+    id = models.AutoField(primary_key=True)
+    safra = models.ForeignKey(Safra, related_name='culturas', on_delete=models.CASCADE)
+    cultura_plantada = models.CharField(max_length=100)
 
