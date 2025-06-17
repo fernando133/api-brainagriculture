@@ -1,4 +1,4 @@
-# Projeto API BIG AGRICULTURE
+# Projeto API BRAIN AGRICULTURE
 
 Este projeto é uma API desenvolvida em Django REST Framework com suporte a Docker e Docker Compose, focada na gestão de produtores, propriedades, safras e culturas.
 
