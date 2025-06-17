@@ -5,6 +5,9 @@ from .serializers import ProdutorSerializer, PropriedadeSerializer, SafraSeriali
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.db.models import Sum, Count
+import logging
+logger = logging.getLogger(__name__)
+
 
 
 class ProdutorViewSet(viewsets.ModelViewSet):

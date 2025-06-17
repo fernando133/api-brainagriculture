@@ -3,6 +3,9 @@ from rest_framework import serializers
 from .models import Produtor, Propriedade, Safra, Cultura
 
 from rest_framework import serializers
+from rest_framework import serializers
+import logging
+logger = logging.getLogger(__name__)
 
 class ProdutorSerializer(serializers.ModelSerializer):
     class Meta:
@@ -41,7 +44,9 @@ class PropriedadeSerializer(serializers.ModelSerializer):
             area_vegetacao=data.get("area_vegetacao_hectares")
         )
         if not valido:
-            raise serializers.ValidationError({"areas_invalidas":Propriedade.msg_erro_areas_invalidas()})
+            msg = Propriedade.msg_erro_areas_invalidas()
+            logger.warning(f"Validação de área falhou: {msg}")
+            raise serializers.ValidationError({"areas_invalidas": msg})
         return data
     
 

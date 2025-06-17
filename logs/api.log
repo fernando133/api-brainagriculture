@@ -1,0 +1,17 @@
+[2025-06-17 14:44:04,595] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-06-17 14:44:30,845] INFO django.utils.autoreload - /code/core/views.py changed, reloading.
+[2025-06-17 14:44:32,594] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-06-17 14:45:06,052] INFO django.utils.autoreload - /code/core/serializers.py changed, reloading.
+[2025-06-17 14:45:07,880] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-06-17 14:45:24,858] INFO django.utils.autoreload - /code/core/serializers.py changed, reloading.
+[2025-06-17 14:45:26,614] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-06-17 14:45:36,412] INFO django.utils.autoreload - /code/core/serializers.py changed, reloading.
+[2025-06-17 14:45:38,101] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-06-17 14:45:56,111] INFO django.utils.autoreload - /code/core/serializers.py changed, reloading.
+[2025-06-17 14:45:57,888] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-06-17 14:46:00,329] INFO django.utils.autoreload - /code/core/serializers.py changed, reloading.
+[2025-06-17 14:46:02,074] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-06-17 14:46:07,604] INFO django.utils.autoreload - /code/core/serializers.py changed, reloading.
+[2025-06-17 14:46:09,320] INFO django.utils.autoreload - Watching for file changes with StatReloader
+[2025-06-17 14:47:24,896] INFO django.utils.autoreload - /code/bigagriculture/settings.py changed, reloading.
+[2025-06-17 14:47:26,605] INFO django.utils.autoreload - Watching for file changes with StatReloader

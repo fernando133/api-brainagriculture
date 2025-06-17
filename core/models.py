@@ -80,4 +80,4 @@ class Cultura(models.Model):
     id = models.AutoField(primary_key=True)
     safra = models.ForeignKey(Safra, related_name='culturas', on_delete=models.CASCADE)
     cultura_plantada = models.CharField(max_length=100)
-
+    
