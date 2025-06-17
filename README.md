@@ -72,7 +72,7 @@ Cada recurso possui endpoints completos (CRUD) e documentação acessível via S
 O arquivo `.env` deve conter a variável `DATABASE_URL`, por exemplo:
 
 ```
-DATABASE_URL=postgres://postgres:postgres@db:5432/bigagriculture
+DATABASE_URL=postgres://postgres:postgres@db:5432/brainagriculture
 ```
 
 ## Logs
